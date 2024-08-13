@@ -77,7 +77,7 @@ nav ul {
   }
 
 /*************************** Responsive ***********************************/
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1000px) {
   nav {
     display: none;
     flex-direction: column;
@@ -90,6 +90,7 @@ nav ul {
     text-align: left;
     z-index: 2;
     transition: 0.1s ease-in-out;
+    vertical-align: middle;
   }
 
   nav ul {
@@ -107,11 +108,18 @@ nav ul {
     display: block;
     margin-left: auto;
   }
- nav .icon{
-    margin-left: 30px;
+  nav .cancel{
     margin-top: 45px;
-    width: 40px;
-    height: 40px;
+  }
+ nav .icon, .menu{
+    margin-left: 30px;
+    /* margin-top: 45px; */
+    width: 30px;
+    height: 30px;
+  }
+  .logo img{
+    max-width: 100px;
+    height: auto;
   }
 }
 
@@ -123,8 +131,6 @@ nav ul {
   background-image: url('img/fitness.png');
   background-size: cover;
   background-position: center;
-  /* height: 32vh; */
-  /* width: 100%; */
   padding: 100px 20px; 
   color: #fff; 
  
@@ -1300,8 +1306,8 @@ input[type="submit"] {
   background-image: url('img/personal-plan.png');
   background-size: cover;
   background-position: center;
-  height: 30vh; 
-  width: 100%;
+  /* height: 30vh; 
+  width: 100%; */
   padding: 100px 20px; 
   color: #fff; 
   cursor: pointer;
@@ -1352,7 +1358,7 @@ input[type="submit"] {
 }
 
 .ways img {
-  width: 450px; 
+  width: 400px; 
   height: 400px; 
   display: block;
   margin: 0 auto 10px; 
@@ -1654,8 +1660,6 @@ input[type="submit"] {
  
 }
 .filter{
-  max-width: 10%;
-  padding-left: 30px;
   display: flex;
 }
 .filter button{
@@ -1679,13 +1683,13 @@ input[type="submit"] {
 .session{
   display: flex;
   align-items: center;
-  position: relative;
+ 
   background-color: #F5F5DC;
   padding: 15px;
   border-radius: 8px;
   border: 1px solid #a9a9a9;
-  margin: 40px auto;
-  width: 95%;
+  margin: 40px 10px;
+  /* width: 95%; */
 }
 
 .session-left {
@@ -1726,22 +1730,17 @@ input[type="submit"] {
 /*************************** Responsive ***********************************/
 @media screen and (max-width: 768px) {
   .filter {
-    max-width: 50%; 
-    padding-left: 0;
     justify-content: center;
+    margin: 5px auto;
   }
 
   .filter button {
     font-size: 18px; 
   }
   
-  .session{
-    width: 90%;
-    
-  }
   .session-left img {
-    max-width: 250px; 
-    max-height: 400px; 
+    width: 100px; 
+    height: auto; 
     display: block;
   }
   .session-right hr {
@@ -1749,22 +1748,26 @@ input[type="submit"] {
   }
 
   .session-right h2 {
-    font-size: 1.2em; 
+    font-size: 1em; 
   }
 
   .session-right p {
-    font-size: 0.9em; 
+    font-size: 0.7em; 
   }
 
   .session-right h4 {
-    font-size: 0.9em; 
-  }
-  .cancel-icon img{
-    width: 10px;
-    height: 35px;
+    font-size: 0.7em; 
   }
 }
-
+/*_________________________________Booked____________________________ */
+.cancel-icon{
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 5px;
+}
+.cancel-icon img{
+  width: 50px;
+}
 
 /*_________________________________View Session____________________________ */
 .view-session-header{
@@ -1873,15 +1876,7 @@ input[type="submit"] {
   
 }
 
-/*_________________________________Booked____________________________ */
-.cancel-icon{
-  position: absolute;
-  bottom: 30px;
-  right: 50px;
-}
-.cancel-icon img{
-  width: 50px;
-}
+
 
 /*_________________________________Cancel Session____________________________ */
 .paragraph{
@@ -1953,7 +1948,7 @@ textarea {
   background-image: url('img/mint-rice.png');
   background-size: cover;
   background-position: center;
-  height: 40vh; 
+  /* height: 40vh;  */
   padding: 100px 20px; 
   color: #fff; 
   cursor: pointer;
@@ -2004,15 +1999,16 @@ textarea {
 }
 
 .variety img {
-  width: 400px; 
-  height: 200px; 
+  width: 200px; 
+  height: 100px; 
   display: block;
-  margin-top: 40px; 
-  margin-left: 40px;
+  margin: 40px auto;
+  /* margin-top: 40px; 
+  margin-left: 40px; */
 }
 
 .variety h2 {
-  font-size: 1.5em;
+  font-size: 1.2em;
   color: #333;
   margin-bottom: 30px;
 }
@@ -2030,14 +2026,14 @@ textarea {
     font-size: 2em; 
   }
   .variety-of-healthy-recipe{
+    flex-direction: column;
     padding: 0px 20px;
   }
 
   .variety img {
-    width: 200px; 
+    width: 180px; 
     height: auto; 
-    margin-top: 20px;
-    margin-left: 0; 
+   margin: 30px auto;
   }
 
   .variety h2 {
@@ -2146,10 +2142,12 @@ textarea {
 
 /*************************** Responsive ***********************************/
 @media screen and (max-width: 768px) {
+  .mint-rice-recipe{
+    flex-direction: column;
+  }
   .mint-rice-recipe hr{
-    border: 2px solid #FF7F00;
-    height: 15vh;
-    margin: 20px;
+      border: none; 
+  
   }
 
   .mint-rice h2{
